@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Libre Baskerville', serif;
+  }
+  .pricing_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+    background-color: black;
+  }
+  .pricing_plan {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .plan_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+  }
+  .plan_price {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+  }
+  .plan_price sup {
+    font-size: 0.4em;
+    position: relative;
+    left: 5px;
+  }
+  .plan_features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #FFF;
+    color: #403d3a;
+  }
+  .plan_features li {
+    margin-bottom: 20px;
+  }
+  .plan_features li::before{
+    content: '\2713';
+    color: #3fab91;
+    font-weight: bolder;
+  }
+  .title_background1 {
+    background-color: yellowgreen;
+  }
+  .title_background3 {
+    background-color:green;
+  }
+  .plan_vip {
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+  }
+  .plan_button {
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+  }
+  @media (max-width: 1024px) {
+    .pricing_container {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+ 
+</style>
+</head>
+<body>
+  <div class="pricing_container">
+    <div class="pricing_plan">
+      <div class="title_background1 plan_title">BASIC</div>
+      <div class="plan_price">$10<sup>/mo</sup></div>
+      
+        <ul class="plan_features">
+          <li>1 sub-domain</li>
+          <li><strong>10</strong> email addresses</li>
+          <li><strong>Unlimited</strong> Bandwith</li>
+          <li><strong>20GB</strong> Storage</li>
+          <li>Supprt Ads</li>
+          <li>Shared Hosting</li>
+          <li><strong>24/7</strong> Customer Support</li>
+        </ul>
+        <button class="plan_button">Sign Up</button>
+    </div>
+
+    <div class="pricing_plan">
+      <div class="plan_title">PREMIUM</div>
+      <div class="plan_price">$25<sup>/mo</sup></div>
+        <ul class="plan_features">
+          <li><strong>Free </strong>custom domain</li>
+          <li><strong>Unlimited</strong> email addresses</li>
+          <li><strong>Unlimited</strong> Bandwith</li>
+          <li><span class="plan_vip">500GB</span> Storage</li>
+          <li><span class="plan_vip">No</span> Ads</li>
+          <li><span class="plan_vip">Antivirus software</span> for 1 year</li>
+          <li>Shared Hosting</li>
+          <li><strong>24/7</strong> Customer Support</li>
+        </ul>
+        <button class="plan_button">Sign Up</button>
+    </div>
+
+    <div class="pricing_plan">
+      <div class="title_background3 plan_title">PRO</div>
+      <div class="plan_price">$55<sup>/mo</sup></div>
+        <ul class="plan_features">
+          <li><strong>Free </strong>custom domain</li>
+          <li><strong>Unlimited</strong> email addresses</li>
+          <li><span class="plan_vip">Digital Gift Vouchers</span> and lottery</li>
+          <li><strong>Unlimited</strong> Bandwith</li>
+          <li><span class="plan_vip">1TB</span>  Storage</li>
+          <li><strong>No</strong> Ads</li>
+          <li>Antivirus software for<span class="plan_vip"> 5 years</span> </li>
+          <li><span class="plan_vip">VPS</span>  Hosting</li>
+          <li><span class="plan_vip">Quick Download Server</span></li>
+          <li><strong>24/7</strong> Customer Support</li>
+        </ul>
+        <button class="plan_button">Sign Up</button>
+    </div>
+
+  </div>
+</body>
+</html>
